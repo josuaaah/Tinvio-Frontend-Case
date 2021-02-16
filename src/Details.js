@@ -34,13 +34,13 @@ export default class Details extends React.Component {
     render() {
         const {details} = this.state;
         return (
-            <div class="main">
+            <div class="detailsmain">
                 <div class="imageholder">
                     <img class="deskimage" src={image} alt="Picture of a desk with books"></img>
                 </div>
 
                 <div class="details">
-                    <h3>{ details.name }</h3>
+                    <h3 class="name">{ details.name }</h3>
                     <table>
                         <tr>
                             <td class="cell"><img class="icon" src={phone} alt="Icon of a phone"></img></td>

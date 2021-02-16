@@ -2,26 +2,58 @@ div {
   font-family: Palatino;
 }
 
-.main {
-  background-color: rgb(248, 248, 248);
-  width: 500px;
-  border: 2px solid rgb(180, 180, 180);
-  padding: 10px;
+.leannesposts {
+  font-family: Geneva;
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+.posttitle {
+  font-family: Geneva;
+  font-weight: bold;
+  font-size: 12px;
+  padding-left: 15px;
+}
+
+.postbody {
+  font-family: Geneva;
+  font-weight: normal;
+  font-size: 12px;
+  color: rgb(117, 117, 117);
+  padding-left: 15px;
+}
+
+.count {
+  padding: 7px;
+  font-family: Geneva;
+  font-size: 10px;
+  color: rgb(83, 83, 83);
+  font-weight: bold;
+}
+
+.postsmain {
+  background-color: white;
+  width: 450px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px;
   margin: 10px;
-  height: 370px;
+  height: 330px;
+  border-radius: 7px;
 }
 
 .post {
-  background-color: rgb(248, 248, 248);
-  width: 425px;
-  height: 100px;
-  border: 2px solid rgb(180, 180, 180);
-  padding: 10px;
+  background-color: white;
+  width: 410px;
+  height: 65px;
+  border: 1px solid rgb(216, 215, 215);
+  padding: 5px 0;
   margin: 10px;
+  border-radius: 7px;
+  vertical-align: middle;
 }
 
 .postsholder {
-  padding: 10px;
+  padding: 0px;
   overflow: auto;
 }
 
