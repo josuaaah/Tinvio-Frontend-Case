@@ -22,14 +22,16 @@ export default class Posts extends React.Component {
         return (
             <div class="main">
                 <h3>Leanne's Posts</h3>
-                <div class="post-count">{posts.length} POSTS</div>
-                <div class="posts">
-                    {posts.map(post => 
-                        <div class="post" key={post.id}>
-                            <p>{post.title}</p>
-                            <p>{post.body.slice(0, PREVIEW_LENGTH) + "..."}</p>
-                        </div>
-                    )}
+                <div class="postsholder">
+                    <div class="post-count">{posts.length} POSTS</div>
+                    <div class="posts">
+                        {posts.map(post => 
+                            <div class="post" key={post.id}>
+                                <p>{post.title}</p>
+                                <p>{post.body.slice(0, PREVIEW_LENGTH) + "..."}</p>
+                            </div>
+                        )}
+                    </div>
                 </div>
             </div>
         )

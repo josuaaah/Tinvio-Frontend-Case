@@ -1,16 +1,29 @@
-.details {
+.main {
   background-color: rgb(248, 248, 248);
   width: 500px;
+  height: 370px;
   border: 2px solid rgb(75, 75, 75);
   padding: 10px;
-  margin: 20px;
-  height: 350px;
+  margin: 10px;
+}
+
+.imageholder {
+  height: 170px;
+  overflow: hidden;
 }
 
 .deskimage {
-  width: 300px;
-  height: 170px;
-  display: block;
+  width: 100%;
+  object-fit: cover;
+  transform: translateY(-25%);
+}
+
+.details {
+  padding: 10px;
+}
+
+.cell {
+  padding: 5px;
 }
 
 .icon {

@@ -1,3 +1,4 @@
-.inline-flex-parent {
+.parent {
   display: inline-flex;
+  margin: 0 auto;
 }

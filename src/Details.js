@@ -6,6 +6,7 @@ import category from './assets/category.png'
 import shop from './assets/icon-24-shop.svg'
 import './Details.css';
 
+
 export default class Details extends React.Component {
     state = {
         details: {}
@@ -33,23 +34,28 @@ export default class Details extends React.Component {
     render() {
         const {details} = this.state;
         return (
-            <div class="details">
-                <img class="deskimage" src={image} alt="Picture of a desk with books"></img>
-                <h3>{ details.name }</h3>
-                <table>
-                    <tr>
-                        <td><img class="icon" src={phone} alt="Icon of a phone"></img></td>
-                        <td>{ details.phone }</td>
-                    </tr>
-                    <tr>
-                        <td><img class="icon" src={category} alt="Icon of a tag"></img></td>
-                        <td>{ details.business }</td>
-                    </tr>
-                    <tr>
-                        <td><img class="icon" src={shop} alt="Icon of a shop"></img></td>
-                        <td>{ details.address }</td>
-                    </tr>
-                </table>
+            <div class="main">
+                <div class="imageholder">
+                    <img class="deskimage" src={image} alt="Picture of a desk with books"></img>
+                </div>
+
+                <div class="details">
+                    <h3>{ details.name }</h3>
+                    <table>
+                        <tr>
+                            <td class="cell"><img class="icon" src={phone} alt="Icon of a phone"></img></td>
+                            <td class="cell">{ details.phone }</td>
+                        </tr>
+                        <tr>
+                            <td class="cell"><img class="icon" src={category} alt="Icon of a tag"></img></td>
+                            <td class="cell">{ details.business }</td>
+                        </tr>
+                        <tr>
+                            <td class="cell"><img class="icon" src={shop} alt="Icon of a shop"></img></td>
+                            <td class="cell">{ details.address }</td>
+                        </tr>
+                    </table>  
+                </div>
             </div>
         )
     }
