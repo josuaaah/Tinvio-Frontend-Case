@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import './Posts.css';
 
 
 export default class Posts extends React.Component {
@@ -18,9 +19,9 @@ export default class Posts extends React.Component {
     render() {
         const {posts} = this.state;
         return (
-            <>
+            <div class="posts">
                 <h3>Leanne's Posts</h3>
-                <div>{posts.length} POSTS</div>
+                <div class="post-count">{posts.length} POSTS</div>
                 <ul>
                     { posts.map(post => 
                         <li key={post.id}>
@@ -28,7 +29,7 @@ export default class Posts extends React.Component {
                             <p>{post.body}</p>
                         </li>) }
                 </ul>
-            </>
+            </div>
         )
     }
 }

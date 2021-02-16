@@ -1,10 +1,10 @@
 import React from 'react';
 import axios from 'axios';
-
 import image from './assets/image.jpg'
 import phone from './assets/phone.svg'
 import category from './assets/category.png'
 import shop from './assets/icon-24-shop.svg'
+import './Details.css';
 
 export default class Details extends React.Component {
     state = {
@@ -33,22 +33,24 @@ export default class Details extends React.Component {
     render() {
         const {details} = this.state;
         return (
-            <>
-                <img src={image} alt="Picture of a desk with books"></img>
+            <div class="details">
+                <img class="deskimage" src={image} alt="Picture of a desk with books"></img>
                 <h3>{ details.name }</h3>
-                <div>
-                    <img src={phone} alt="Icon of a phone"></img>
-                    { details.phone }
-                </div>
-                <div>
-                    <img src={category} alt="Icon of a tag"></img>
-                    { details.business }
-                </div>
-                <div>
-                    <img src={shop} alt="Icon of a shop"></img>
-                    { details.address }
-                </div>
-            </>
+                <table>
+                    <tr>
+                        <td><img class="icon" src={phone} alt="Icon of a phone"></img></td>
+                        <td>{ details.phone }</td>
+                    </tr>
+                    <tr>
+                        <td><img class="icon" src={category} alt="Icon of a tag"></img></td>
+                        <td>{ details.business }</td>
+                    </tr>
+                    <tr>
+                        <td><img class="icon" src={shop} alt="Icon of a shop"></img></td>
+                        <td>{ details.address }</td>
+                    </tr>
+                </table>
+            </div>
         )
     }
 }
