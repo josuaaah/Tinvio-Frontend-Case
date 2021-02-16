@@ -18,17 +18,19 @@ export default class Posts extends React.Component {
 
     render() {
         const {posts} = this.state;
+        const PREVIEW_LENGTH = 100
         return (
-            <div class="posts">
+            <div class="main">
                 <h3>Leanne's Posts</h3>
                 <div class="post-count">{posts.length} POSTS</div>
-                <ul>
-                    { posts.map(post => 
-                        <li key={post.id}>
-                            <p><b>{post.title}</b></p>
-                            <p>{post.body}</p>
-                        </li>) }
-                </ul>
+                <div class="posts">
+                    {posts.map(post => 
+                        <div class="post" key={post.id}>
+                            <p>{post.title}</p>
+                            <p>{post.body.slice(0, PREVIEW_LENGTH) + "..."}</p>
+                        </div>
+                    )}
+                </div>
             </div>
         )
     }

@@ -6,12 +6,10 @@ import Posts from "./Posts";
 
 function App() {
   return (
-    <table>
-      <tr>
-        <td><Details /></td>
-        <td><Posts /></td>
-      </tr>
-    </table>
+    <div class='parent inline-flex-parent'>
+      <div class='child'><Details /></div>
+      <div class='child'><Posts /></div>
+    </div>
   );
 }
 
