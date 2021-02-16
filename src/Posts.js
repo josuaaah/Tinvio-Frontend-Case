@@ -1,7 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 
+
 export default class Posts extends React.Component {
+
     state = {
         posts: []
     }
@@ -16,15 +18,9 @@ export default class Posts extends React.Component {
 
     render() {
         return (
-            <ul>
-                { this.state.posts.map(post => <li>{post.title}</li>) }
-            </ul>
+            <div>
+                { this.state.posts.map(post => <p key={post.id}> {post.title} </p>) }
+            </div>
         )
     }
-
-
-
-
-
-
 }
