@@ -5,6 +5,7 @@ import './Posts.css';
 
 export default class Posts extends React.Component {
     state = {
+        name: "",
         posts: []
     }
 
@@ -14,6 +15,11 @@ export default class Posts extends React.Component {
                 const posts = res.data;
                 this.setState({ posts })
             })
+        axios.get("https://jsonplaceholder.typicode.com/users/1")
+            .then(res => {
+                const name = res.data.name;
+                this.setState({ name })
+            })
     }
 
     render() {
@@ -22,7 +28,7 @@ export default class Posts extends React.Component {
         const MAX_TITLE_LENGTH = 50
         return (
             <div class="postsmain">
-                <h3 class="leannesposts">Leanne's Posts</h3>
+                <h3 class="postsheader">{this.state.name.split(" ")[0]}'s Posts</h3>
                 <div class="postsholder">
                     <div class="count">{posts.length} POSTS</div>
                     <div class="posts">
