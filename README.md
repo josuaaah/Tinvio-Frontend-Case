@@ -1,5 +1,7 @@
 # Tinvio Frontend Case
 
+![Picture of final product](final.png)
+
 ## Steps required to run application
 
 1. Clone this repository onto your computer.
